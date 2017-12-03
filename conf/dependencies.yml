@@ -1,0 +1,5 @@
+# Application dependencies
+
+require:
+    - play
+    - play -> jersey 0.1

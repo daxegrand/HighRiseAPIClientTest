@@ -1,0 +1,17 @@
+#{extends 'main.html' /}
+#{set title:'Home' /}
+<h3>Search Highrise contacts by tag</h3>
+#{form @Application.getContact(name)}
+    #{ifErrors}
+        <p class="error">
+            Please input a tag.
+        </p>
+    #{/ifErrors}
+    <p>
+        <label for="tag">Tag name:</label>
+        <input type="text" name="tag" id="tag" value="${params.tag}" />
+    </p>
+    <p>
+        <input type="submit" value="Search">
+    </p>
+#{/form}

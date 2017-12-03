@@ -1,0 +1,38 @@
+#{extends 'main.html' /}
+#{set title:'Contacts tagged with ' + tag /}
+
+#{if contacts.size() > 1}
+<h3>There are ${contacts.size()} contacts tagged '${tag}'</h3>
+#{/if}
+#{elseif contacts}
+ <h3>There is 1 contact tagged '${tag}'</h3>
+#{/elseif}
+#{else}
+ <h3>No contact tagged '${tag}'</h3>
+#{/else}
+*{********* Contact list *********}*
+
+<div class="older-posts">
+    #{list items:contacts, as:'contact'}
+        #{display contact:contact, as:'teaser' /}
+    #{/list}
+</div>
+<div class="older-posts">
+    <h3>Search local database</h3>
+    #{form @Application.searchDB(name)}
+        <p>
+            <label for="name">Select tag:</label>
+            <select name="name" id="name">
+                <option value="">Select Tag</option>
+                #{list items:tags, as:'tag'}
+                    <option value="${tag.name}">${tag.name}</option>
+                #{/list}
+            </select>
+        </p>
+        <p>
+            <input type="submit" value="Go">
+        </p>
+        
+    #{/form}
+</div>
+

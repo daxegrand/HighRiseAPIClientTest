@@ -1,0 +1,27 @@
+*{ Display a post in one of these modes: 'full', 'home', 'teaser' }*
+
+<div class="post ${_as == 'teaser' ? 'teaser' : ''}">
+    <h2 class="post-title">
+        <a href="@{Application.show(_contact.contactId)}">${_contact.firstName} ${_contact.lastName}</a>
+    </h2>
+    <div class="post-metadata">
+        <span class="post-author">working at ${_contact.company}</span>
+        <span class="post-date">as ${_contact.title}</span>
+    </div>
+</div>
+#{if _as == 'full'}
+<div id="details">
+    <p>
+        <label for="email">Email</label>
+        <input type="text" name="email" id="email" readonly value="${_contact.email}">
+    </p>
+    <p>
+        <label for="phone">Phone</label>
+        <input type="text" name="phone" id="phone" readonly value="${_contact.phone}">
+    </p>
+    <p>
+        <label for="background">Background</label>
+        <textarea name="background" readonly>${_contact.background}</textarea>
+    </p>
+</div>
+#{/if}

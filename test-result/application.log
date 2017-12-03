@@ -1,0 +1,5 @@
+03 Dec 2017 22:53:07,396 INFO  ~ Starting D:\PERSONAL\PLAY\CAZOOMI\V1.2.5.6\highrise10
+03 Dec 2017 22:53:07,919 WARN  ~ You're running Play! in DEV mode
+03 Dec 2017 22:53:08,052 INFO  ~ Listening for HTTP on port 9000 (Waiting a first request to start) ...
+03 Dec 2017 22:53:13,915 INFO  ~ Connected to jdbc:h2:mem:play;MODE=MYSQL;LOCK_MODE=0
+03 Dec 2017 22:53:14,752 INFO  ~ Application 'Highrise API Client 1.0' is now started !
