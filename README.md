@@ -10,3 +10,6 @@ play run
 
 # Test
 play test
+
+# Notice
+This application uses in memory database only.
