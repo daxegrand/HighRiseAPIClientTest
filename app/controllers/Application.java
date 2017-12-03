@@ -158,20 +158,6 @@ public class Application extends Controller {
                 if(checkContact == null){
                     Contact contact = new Contact(contactId, background, email, firstName, lastName, company, title, phone).save();
                     contact.tagItWith(tag).save();
-                    // NodeList tagList = xmlParser(output, "tag");
-    
-                    // for(int j = 0; j < tagList.getLength(); j++){
-                    //     Node tag = tagList.item(j);
-    
-                    //     if(tag.getNodeType() == Node.ELEMENT_NODE){
-                    //         element = (Element) tag;
-                    //         System.out.println("Tag ID: " + getTagValue("id", element));
-                    //         System.out.println("Tag Name: " + getTagValue("name", element));
-                    //         String tagName =  getTagValue("name", element);
-                    //         contact.tagItWith(tagName).save();
-                    //         System.out.println("Tags saved!");
-                    //     }
-                    // }
                     System.out.println("Contact info saved!");
                 }else{
                     checkContact.tagItWith(tag).save();
